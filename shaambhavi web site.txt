@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shaambhavi Manufacturers – Aluminium Bottles | Bahadurgarh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --gold:#B8860B;
+    --gold-light:#D4A017;
+    --gold-pale:#FDF3DC;
+    --dark:#1A1A2E;
+    --charcoal:#2D2D3F;
+    --text:#1C1C1C;
+    --text-muted:#6B6B6B;
+    --bg:#FAFAF8;
+    --bg-card:#FFFFFF;
+    --border:#E8E4DC;
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(26,26,46,0.97);backdrop-filter:blur(12px);padding:16px 48px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(212,160,23,0.2)}
+  .nav-logo{display:flex;align-items:center;gap:12px}
+  .nav-logo-box{width:38px;height:38px;background:linear-gradient(135deg,#B8860B,#D4A017);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:18px;font-weight:900;color:#fff}
+  .nav-name{font-family:'Playfair Display',serif;font-size:16px;color:#fff;font-weight:700}
+  .nav-links{display:flex;gap:32px}
+  .nav-links a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:13px;letter-spacing:0.5px;transition:color 0.2s}
+  .nav-links a:hover{color:#D4A017}
+  .nav-cta{background:linear-gradient(135deg,#B8860B,#D4A017);color:#fff;padding:9px 20px;border-radius:8px;font-size:13px;font-weight:500;text-decoration:none;letter-spacing:0.3px;transition:opacity 0.2s}
+  .nav-cta:hover{opacity:0.88}
+  .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+  .hamburger span{width:22px;height:2px;background:#fff;border-radius:2px;display:block}
+
+  .hero{background:linear-gradient(150deg,#111126 0%,#1A1A2E 40%,#252540 100%);min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:120px 48px 80px;position:relative;overflow:hidden}
+  .hero-inner{display:grid;grid-template-columns:1fr 380px;gap:48px;align-items:center;width:100%}
+  /* Info panel */
+  .hero-panel{
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(212,160,23,0.22);
+    border-radius:24px;
+    padding:32px 28px;
+    backdrop-filter:blur(14px);
+    display:flex;flex-direction:column;gap:0;
+    animation:fadeUp 0.7s ease 0.5s both;
+  }
+  .panel-title{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#D4A017;margin-bottom:20px;font-weight:500}
+  .panel-divider{height:1px;background:rgba(255,255,255,0.08);margin:20px 0}
+  /* Hours block */
+  .hours-block{display:flex;flex-direction:column;gap:4px}
+  .hours-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:10px}
+  .hours-row{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border-radius:10px;transition:background 0.2s}
+  .hours-row:hover{background:rgba(255,255,255,0.04)}
+  .hours-day{font-size:13px;color:rgba(255,255,255,0.75);display:flex;align-items:center;gap:8px}
+  .hours-dot{width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 6px rgba(74,222,128,0.6);flex-shrink:0}
+  .hours-dot.closed{background:#6b7280;box-shadow:none}
+  .hours-time{font-size:13px;color:#D4A017;font-weight:500;font-family:'Playfair Display',serif}
+  /* Status badge */
+  .status-badge{
+    display:flex;align-items:center;gap:10px;
+    background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.2);
+    border-radius:12px;padding:12px 16px;margin-bottom:20px;
+  }
+  .status-dot-outer{width:10px;height:10px;border-radius:50%;background:rgba(74,222,128,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .status-dot-inner{width:5px;height:5px;border-radius:50%;background:#4ade80;animation:pulse 2s ease infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+  .status-text{font-size:12px;color:rgba(255,255,255,0.7);line-height:1.4}
+  .status-text strong{color:#4ade80;font-weight:500}
+  /* Quick contact */
+  .quick-contact{display:flex;flex-direction:column;gap:10px}
+  .qc-item{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.07);transition:border-color 0.2s,background 0.2s;cursor:default}
+  .qc-item:hover{border-color:rgba(212,160,23,0.3);background:rgba(212,160,23,0.05)}
+  .qc-icon{font-size:16px;flex-shrink:0}
+  .qc-label{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:2px}
+  .qc-val{font-size:12px;color:rgba(255,255,255,0.82);line-height:1.3}
+  @media(max-width:1024px){.hero-inner{grid-template-columns:1fr;gap:40px}.hero-panel{max-width:480px}}
+  @media(max-width:768px){.hero-inner{grid-template-columns:1fr}.hero-panel{display:none}}
+  .hero-bg-circle1{position:absolute;top:-10%;right:-5%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(184,134,11,0.07) 0%,transparent 70%);pointer-events:none}
+  .hero-bg-circle2{position:absolute;bottom:-15%;left:-5%;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(184,134,11,0.05) 0%,transparent 70%);pointer-events:none}
+  .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(184,134,11,0.15);border:1px solid rgba(184,134,11,0.3);border-radius:20px;padding:6px 16px;font-size:11px;letter-spacing:2px;color:#D4A017;text-transform:uppercase;margin-bottom:28px}
+  .hero-title{font-family:'Playfair Display',serif;font-size:clamp(40px,6vw,80px);font-weight:900;color:#fff;line-height:1.05;margin-bottom:20px}
+  .hero-title .gold{color:#D4A017}
+  .hero-title .outline{-webkit-text-stroke:1px rgba(255,255,255,0.4);color:transparent}
+  .hero-sub{font-size:16px;color:rgba(255,255,255,0.6);line-height:1.8;max-width:540px;margin-bottom:44px}
+  .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:64px}
+  .btn-primary{background:linear-gradient(135deg,#B8860B,#D4A017);color:#fff;padding:14px 32px;border-radius:10px;font-size:15px;font-weight:500;text-decoration:none;letter-spacing:0.3px;transition:opacity 0.2s,transform 0.15s}
+  .btn-primary:hover{opacity:0.9;transform:translateY(-1px)}
+  .btn-outline{border:1px solid rgba(255,255,255,0.25);color:rgba(255,255,255,0.8);padding:14px 32px;border-radius:10px;font-size:15px;font-weight:400;text-decoration:none;transition:border-color 0.2s,color 0.2s}
+  .btn-outline:hover{border-color:#D4A017;color:#D4A017}
+  .hero-stats{display:grid;grid-template-columns:repeat(3,auto);gap:0;border:1px solid rgba(255,255,255,0.1);border-radius:16px;overflow:hidden;max-width:460px}
+  .stat{padding:20px 32px;text-align:center;border-right:1px solid rgba(255,255,255,0.1)}
+  .stat:last-child{border-right:none}
+  .stat-num{font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:#D4A017;display:block}
+  .stat-lbl{font-size:11px;color:rgba(255,255,255,0.45);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px}
+
+  section{padding:88px 48px}
+  .section-kicker{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+  .section-heading{font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;color:var(--text);line-height:1.15;margin-bottom:16px}
+  .gold-bar{width:48px;height:3px;background:var(--gold);border-radius:2px;margin-bottom:40px}
+  .section-desc{font-size:15px;color:var(--text-muted);line-height:1.8;max-width:560px;margin-bottom:48px}
+
+  /* PRODUCTS */
+  #products{background:#fff}
+  .products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:20px}
+
+  .product-card{
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:24px 16px 20px;
+    text-align:center;
+    transition:all 0.28s cubic-bezier(0.34,1.56,0.64,1);
+    cursor:pointer;
+    background:#fff;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .product-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#B8860B,#D4A017);transform:scaleX(0);transition:transform 0.25s;transform-origin:left}
+  .product-card:hover{transform:translateY(-8px) scale(1.02);border-color:#D4A017;box-shadow:0 16px 48px rgba(184,134,11,0.15)}
+  .product-card:hover::before{transform:scaleX(1)}
+  .product-card:hover .bottle-wrap{filter:drop-shadow(0 8px 20px rgba(184,134,11,0.35))}
+
+  /* Fixed height bottle area so cards align */
+  .bottle-wrap{
+    width:80px;
+    height:130px;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    margin-bottom:14px;
+    transition:filter 0.3s;
+  }
+  .bottle-wrap svg{display:block}
+
+  .p-size{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--gold)}
+  .p-label{font-size:11px;color:var(--text-muted);margin-top:4px;letter-spacing:0.5px}
+  .click-hint{font-size:10px;color:var(--gold);margin-top:8px;opacity:0;transition:opacity 0.2s;letter-spacing:0.5px}
+  .product-card:hover .click-hint{opacity:1}
+
+  /* MODAL */
+  .modal-overlay{
+    display:none;position:fixed;inset:0;z-index:999;
+    background:rgba(10,10,20,0.75);backdrop-filter:blur(8px);
+    align-items:center;justify-content:center;padding:20px;
+  }
+  .modal-overlay.open{display:flex}
+  .modal-box{
+    background:linear-gradient(145deg,#1e1e36,#252545);
+    border:1px solid rgba(212,160,23,0.25);
+    border-radius:28px;max-width:520px;width:100%;
+    padding:44px 40px;position:relative;
+    box-shadow:0 32px 80px rgba(0,0,0,0.6);
+    animation:modalIn 0.35s cubic-bezier(0.34,1.56,0.64,1) forwards;
+  }
+  @keyframes modalIn{from{opacity:0;transform:scale(0.85) translateY(20px)}to{opacity:1;transform:scale(1) translateY(0)}}
+  .modal-close{
+    position:absolute;top:18px;right:20px;
+    width:36px;height:36px;border-radius:50%;
+    background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);
+    color:rgba(255,255,255,0.6);font-size:18px;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;
+    transition:all 0.2s;
+  }
+  .modal-close:hover{background:rgba(184,134,11,0.2);border-color:#D4A017;color:#D4A017}
+  .modal-inner{display:flex;gap:32px;align-items:center}
+  .modal-bottle{flex-shrink:0;display:flex;align-items:flex-end;justify-content:center;width:110px;height:200px}
+  .modal-bottle svg{display:block}
+  .modal-info{}
+  .modal-size{font-family:'Playfair Display',serif;font-size:42px;font-weight:900;color:#D4A017;line-height:1}
+  .modal-label{font-size:13px;color:rgba(255,255,255,0.5);letter-spacing:2px;text-transform:uppercase;margin-top:4px;margin-bottom:20px}
+  .modal-specs{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+  .spec-row{display:flex;gap:10px;align-items:center}
+  .spec-dot{width:6px;height:6px;border-radius:50%;background:#D4A017;flex-shrink:0}
+  .spec-text{font-size:13px;color:rgba(255,255,255,0.7);line-height:1.4}
+  .modal-btn{
+    display:inline-block;padding:12px 24px;
+    background:linear-gradient(135deg,#B8860B,#D4A017);
+    color:#fff;border-radius:10px;font-size:13px;font-weight:500;
+    text-decoration:none;letter-spacing:0.3px;
+    transition:opacity 0.2s,transform 0.15s;border:none;cursor:pointer;
+    font-family:'DM Sans',sans-serif;width:100%;text-align:center;
+  }
+  .modal-btn:hover{opacity:0.9;transform:translateY(-1px)}
+
+  /* WHY */
+  #why{background:var(--bg)}
+  .why-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
+  .why-card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:32px 28px;transition:box-shadow 0.2s,border-color 0.2s}
+  .why-card:hover{box-shadow:0 8px 32px rgba(0,0,0,0.06);border-color:#D4A017}
+  .why-icon{width:48px;height:48px;background:linear-gradient(135deg,rgba(184,134,11,0.12),rgba(212,160,23,0.18));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:18px}
+  .why-title{font-size:15px;font-weight:500;margin-bottom:8px}
+  .why-desc{font-size:13px;color:var(--text-muted);line-height:1.7}
+
+  /* ENQUIRY */
+  #enquiry{background:linear-gradient(150deg,#1A1A2E,#252540);padding:88px 48px}
+  #enquiry .section-heading{color:#fff}
+  #enquiry .section-kicker{color:#D4A017}
+  #enquiry .gold-bar{background:#D4A017}
+  .form-wrap{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:24px;padding:48px;max-width:780px;backdrop-filter:blur(10px)}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
+  .form-group{display:flex;flex-direction:column;gap:8px}
+  .form-group.full{grid-column:1/-1}
+  .form-label{font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.5)}
+  .form-label span{color:#D4A017;margin-right:4px}
+  .form-input{padding:13px 16px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;font-size:14px;font-family:'DM Sans',sans-serif;color:#fff;outline:none;transition:border-color 0.2s,background 0.2s}
+  .form-input::placeholder{color:rgba(255,255,255,0.3)}
+  .form-input:focus{border-color:#D4A017;background:rgba(255,255,255,0.1)}
+  textarea.form-input{resize:vertical;min-height:100px}
+  .stars-row{display:flex;gap:10px;padding:4px 0}
+  .star-btn{width:42px;height:42px;border:1px solid rgba(255,255,255,0.15);border-radius:10px;background:rgba(255,255,255,0.06);cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:all 0.15s;color:rgba(255,255,255,0.3)}
+  .star-btn.active{background:rgba(184,134,11,0.2);border-color:#B8860B;color:#D4A017}
+  .submit-btn{width:100%;padding:16px;background:linear-gradient(135deg,#B8860B,#D4A017);border:none;border-radius:12px;color:#fff;font-size:15px;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;margin-top:12px;letter-spacing:0.5px;transition:opacity 0.2s,transform 0.15s}
+  .submit-btn:hover:not(:disabled){opacity:0.9;transform:translateY(-1px)}
+  .submit-btn:disabled{opacity:0.6;cursor:not-allowed}
+  .success-msg{display:none;text-align:center;padding:20px;background:rgba(99,153,34,0.15);border:1px solid rgba(99,153,34,0.4);border-radius:12px;color:#8fcc4a;font-size:14px;margin-top:16px;line-height:1.6}
+  .error-msg{display:none;text-align:center;padding:20px;background:rgba(220,53,69,0.15);border:1px solid rgba(220,53,69,0.4);border-radius:12px;color:#ff8a8a;font-size:14px;margin-top:16px;line-height:1.6}
+
+  /* CONTACT */
+  #contact{background:#fff;padding:88px 48px}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+  .map-frame{border-radius:20px;overflow:hidden;border:1px solid var(--border);height:340px}
+  .map-frame iframe{width:100%;height:100%;border:none;display:block}
+  .contact-info h3{font-family:'Playfair Display',serif;font-size:26px;margin-bottom:8px}
+  .contact-info .gold-bar{margin-bottom:28px}
+  .info-item{display:flex;gap:14px;margin-bottom:24px;align-items:flex-start}
+  .info-icon{width:40px;height:40px;background:var(--gold-pale);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+  .info-label{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+  .info-val{font-size:14px;color:var(--text);line-height:1.6}
+
+  footer{background:#111126;padding:32px 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;border-top:1px solid rgba(212,160,23,0.15)}
+  .footer-logo{font-family:'Playfair Display',serif;font-size:15px;color:#fff;font-weight:700}
+  .footer-copy{font-size:12px;color:rgba(255,255,255,0.3);letter-spacing:0.5px}
+  .footer-gold{color:#D4A017}
+
+  @media(max-width:768px){
+    nav{padding:14px 20px}
+    .nav-links,.nav-cta{display:none}
+    .hamburger{display:flex}
+    .hero{padding:100px 24px 60px}
+    section{padding:60px 24px}
+    #enquiry{padding:60px 24px}
+    #contact{padding:60px 24px}
+    .form-wrap{padding:28px 20px}
+    .form-row{grid-template-columns:1fr}
+    .contact-grid{grid-template-columns:1fr}
+    .hero-stats{grid-template-columns:repeat(3,1fr);max-width:100%}
+    .stat{padding:14px 12px}
+    footer{padding:24px 20px;flex-direction:column;text-align:center}
+    .modal-inner{flex-direction:column;text-align:center}
+    .modal-box{padding:32px 24px}
+  }
+
+  @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+  .fade-up{opacity:0;animation:fadeUp 0.6s ease forwards}
+  .delay-1{animation-delay:0.1s}
+  .delay-2{animation-delay:0.2s}
+  .delay-3{animation-delay:0.35s}
+  .delay-4{animation-delay:0.5s}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-box">S</div>
+    <div class="nav-name">Shaambhavi Manufacturers</div>
+  </div>
+  <div class="nav-links">
+    <a href="#products">Products</a>
+    <a href="#why">About</a>
+    <a href="#enquiry">Enquiry</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="#enquiry" class="nav-cta">Get Quote</a>
+  <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg-circle1"></div>
+  <div class="hero-bg-circle2"></div>
+  <div class="hero-inner">
+    <!-- LEFT: main content -->
+    <div class="hero-left">
+      <div class="hero-badge">🏭 HSIIDC Certified · Bahadurgarh, Haryana</div>
+      <h1 class="hero-title fade-up delay-1">
+        Premium <span class="gold">Aluminium</span><br>
+        <span class="outline">Bottles &</span> Packaging
+      </h1>
+      <p class="hero-sub fade-up delay-2">Industry-grade aluminium bottles from 15ml precision vials to 25-litre bulk containers. Trusted by businesses across India for quality, durability, and consistent supply.</p>
+      <div class="hero-actions fade-up delay-3">
+        <a href="#enquiry" class="btn-primary">Request a Quote →</a>
+        <a href="#products" class="btn-outline">View Products</a>
+      </div>
+      <div class="hero-stats fade-up delay-4">
+        <div class="stat"><span class="stat-num">15ml</span><div class="stat-lbl">Min Size</div></div>
+        <div class="stat"><span class="stat-num">25L</span><div class="stat-lbl">Max Size</div></div>
+        <div class="stat"><span class="stat-num">100%</span><div class="stat-lbl">Aluminium</div></div>
+      </div>
+    </div>
+
+    <!-- RIGHT: office info panel -->
+    <div class="hero-panel">
+      <div class="panel-title">📍 Office Information</div>
+
+      <!-- Live status -->
+      <div class="status-badge" id="liveStatus">
+        <div class="status-dot-outer"><div class="status-dot-inner"></div></div>
+        <div class="status-text" id="statusText"><strong>Open Now</strong> — We're available to take your enquiry</div>
+      </div>
+
+      <!-- Working hours -->
+      <div class="hours-block">
+        <div class="hours-label">⏰ Working Hours</div>
+        <div class="hours-row">
+          <span class="hours-day"><span class="hours-dot"></span>Monday – Saturday</span>
+          <span class="hours-time">10:00 AM – 7:00 PM</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day"><span class="hours-dot closed"></span>Sunday</span>
+          <span class="hours-time" style="color:rgba(255,255,255,0.3);font-family:'DM Sans',sans-serif;font-size:12px">Closed</span>
+        </div>
+      </div>
+
+      <div class="panel-divider"></div>
+
+      <!-- Quick contact info -->
+      <div class="panel-title" style="margin-bottom:14px">🏢 Visit / Contact Us</div>
+      <div class="quick-contact">
+        <div class="qc-item">
+          <span class="qc-icon">📍</span>
+          <div>
+            <div class="qc-label">Address</div>
+            <div class="qc-val">HSIIDC, 136B, Sector 16<br>Bahadurgarh, Haryana 124508</div>
+          </div>
+        </div>
+        <div class="qc-item">
+          <span class="qc-icon">🏭</span>
+          <div>
+            <div class="qc-label">Industry Zone</div>
+            <div class="qc-val">HSIIDC Certified Industrial Unit<br>Govt. Recognized Manufacturer</div>
+          </div>
+        </div>
+        <div class="qc-item">
+          <span class="qc-icon">📦</span>
+          <div>
+            <div class="qc-label">Products</div>
+            <div class="qc-val">Aluminium Bottles: 15ml – 25 Ltr<br>Bulk &amp; Custom Orders Welcome</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-divider"></div>
+
+      <a href="#enquiry" style="display:block;text-align:center;padding:13px;background:linear-gradient(135deg,#B8860B,#D4A017);border-radius:12px;color:#fff;font-size:13px;font-weight:500;text-decoration:none;letter-spacing:0.3px;transition:opacity 0.2s" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">
+        📩 Send Enquiry Now
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="section-kicker">Our Product Range</div>
+  <h2 class="section-heading">Bottles for Every Scale</h2>
+  <div class="gold-bar"></div>
+  <p class="section-desc">Kisi bhi size mein premium aluminium bottles — pharma, cosmetic, food, aur industrial use ke liye. Card click karein details dekhne ke liye.</p>
+  <div class="products-grid" id="productsGrid">
+    <!-- Cards injected by JS -->
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="section-kicker">Why Choose Us</div>
+  <h2 class="section-heading">Quality You Can Trust</h2>
+  <div class="gold-bar"></div>
+  <div class="why-grid">
+    <div class="why-card"><div class="why-icon">🏭</div><div class="why-title">HSIIDC Certified Unit</div><div class="why-desc">Operating from HSIIDC Sector 16, Bahadurgarh — a government-recognized industrial zone ensuring compliance and quality standards.</div></div>
+    <div class="why-card"><div class="why-icon">⚡</div><div class="why-title">Custom Sizes Available</div><div class="why-desc">From 15ml to 25 litres, we manufacture to your exact size and specification requirements for any industry.</div></div>
+    <div class="why-card"><div class="why-icon">🔒</div><div class="why-title">Premium Grade Aluminium</div><div class="why-desc">Corrosion-resistant, lightweight, and suitable for pharma, cosmetic, food, and industrial applications.</div></div>
+    <div class="why-card"><div class="why-icon">🚚</div><div class="why-title">Bulk Order Ready</div><div class="why-desc">High production capacity ensuring large-volume orders are fulfilled on time with consistent quality throughout.</div></div>
+    <div class="why-card"><div class="why-icon">🤝</div><div class="why-title">Direct Manufacturer</div><div class="why-desc">No middlemen — buy directly from the manufacturer for best pricing, faster turnaround, and better communication.</div></div>
+    <div class="why-card"><div class="why-icon">🌍</div><div class="why-title">Pan India Supply</div><div class="why-desc">Supplying businesses across India from our Bahadurgarh facility with reliable logistics and packaging.</div></div>
+  </div>
+</section>
+
+<!-- BOTTLE TYPES -->
+<section id="types">
+  <div class="section-kicker">Bottle Designs</div>
+  <h2 class="section-heading">Available Bottle Shapes</h2>
+  <div class="gold-bar"></div>
+  <p class="section-desc">Hum sirf sizes hi nahi, alag-alag bottle shapes bhi banate hain jo different industries ke liye suitable hote hain.</p>
+
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">🧴</div>
+      <div class="why-title">Round Bottles</div>
+      <div class="why-desc">Sabse common shape – pharma, oil aur cosmetic use ke liye perfect.</div>
+    </div>
+
+    <div class="why-card">
+      <div class="why-icon">🧃</div>
+      <div class="why-title">Flat Bottles</div>
+      <div class="why-desc">Space-saving design – easy storage aur transport ke liye.</div>
+    </div>
+
+    <div class="why-card">
+      <div class="why-icon">🛢️</div>
+      <div class="why-title">Industrial Cans</div>
+      <div class="why-desc">5L, 10L, 25L ke heavy-duty containers – chemicals aur bulk liquid ke liye.</div>
+    </div>
+
+    <div class="why-card">
+      <div class="why-icon">💧</div>
+      <div class="why-title">Narrow Neck Bottles</div>
+      <div class="why-desc">Controlled pouring ke liye – essential oils aur chemicals mein use hota hai.</div>
+    </div>
+
+    <div class="why-card">
+      <div class="why-icon">⚙️</div>
+      <div class="why-title">Custom Design</div>
+      <div class="why-desc">Client ke requirement ke hisaab se custom mould aur design available.</div>
+    </div>
+  </div>
+</section>
+
+<!-- MANUFACTURING VIDEOS -->
+<section id="videos" style="background:#fff;">
+  <div class="section-kicker">Manufacturing Process</div>
+  <h2 class="section-heading">How Aluminium Bottles Are Made</h2>
+  <div class="gold-bar"></div>
+  <p class="section-desc">Neeche diye gaye videos se aap dekh sakte hain ki aluminium bottles kaise manufacture hoti hain.</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+    <div class="map-frame">
+      <iframe src="https://www.youtube.com/embed/RDJ9O--8o3o"
+        title="Bottle Manufacturing Video 1"
+        allowfullscreen></iframe>
+    </div>
+    <div class="map-frame">
+      <iframe src="https://www.youtube.com/embed/xGkG8rbqPH0"
+        title="Bottle Manufacturing Video 2"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ENQUIRY -->
+<section id="enquiry">
+  <div class="section-kicker">Get In Touch</div>
+  <h2 class="section-heading">Send an Enquiry</h2>
+  <div class="gold-bar"></div>
+  <div class="form-wrap">
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label"><span>A</span> Full Name *</label>
+        <input type="text" class="form-input" id="f-name" placeholder="Aapka poora naam">
+      </div>
+      <div class="form-group">
+        <label class="form-label"><span>B</span> Mobile Number *</label>
+        <input type="tel" class="form-input" id="f-mobile" placeholder="+91 XXXXX XXXXX">
+      </div>
+      <div class="form-group full">
+        <label class="form-label"><span>C</span> Order *</label>
+        <textarea class="form-input" id="f-address" placeholder="Aapka pura address (city, state, pincode...)"></textarea>
+      </div>
+      <div class="form-group full">
+        <label class="form-label"><span>D</span> Rating (Stars)</label>
+        <div class="stars-row" id="starGroup">
+          <button class="star-btn" onclick="setStar(1)">★</button>
+          <button class="star-btn" onclick="setStar(2)">★</button>
+          <button class="star-btn" onclick="setStar(3)">★</button>
+          <button class="star-btn" onclick="setStar(4)">★</button>
+          <button class="star-btn" onclick="setStar(5)">★</button>
+        </div>
+      </div>
+    </div>
+    <button class="submit-btn" id="submitBtn" onclick="submitForm()">Submit Enquiry →</button>
+    <div class="success-msg" id="successMsg">✅ Shukriya! Aapki enquiry hamare paas pahunch gayi hai.<br>Hum 24 ghante ke andar aapko contact karenge.</div>
+    <div class="error-msg" id="errorMsg">❌ Kuch gadbad ho gayi. Kripya dobara try karein ya seedha call karein.</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-kicker">Find Us</div>
+  <h2 class="section-heading">Our Location</h2>
+  <div class="gold-bar"></div>
+  <div class="contact-grid">
+    <div class="map-frame">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.123!2d76.9258!3d28.6814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d8b0000000001%3A0x1!2sHSIIDC+Sector+16+Bahadurgarh!5e0!3m2!1sen!2sin!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Shaambhavi Manufacturers Location"></iframe>
+    </div>
+    <div class="contact-info">
+      <h3>Shaambhavi Manufacturers</h3>
+      <div class="gold-bar"></div>
+      <div class="info-item">
+        <div class="info-icon">📍</div>
+        <div><div class="info-label">Address</div><div class="info-val">HSIIDC, 136B, Sector 16<br>Bahadurgarh, Haryana 124508</div></div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">🏭</div>
+        <div><div class="info-label">Specialization</div><div class="info-val">Aluminium Bottles Manufacturing<br>Range: 15ml to 25 Litres</div></div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">📦</div>
+        <div><div class="info-label">Order Type</div><div class="info-val">Bulk Orders · Custom Sizes<br>Direct from Manufacturer</div></div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">🕒</div>
+        <div><div class="info-label">Working Hours</div><div class="info-val">Monday – Saturday<br>9:00 AM – 6:00 PM</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Shaambhavi <span class="footer-gold">Manufacturers</span></div>
+  <div class="footer-copy">© 2026 Shaambhavi Manufacturers · HSIIDC Sector 16, Bahadurgarh · All Rights Reserved
+    Developer Jaipal
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+  <div class="modal-box" id="modalBox">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-inner">
+      <div class="modal-bottle" id="modalBottle"></div>
+      <div class="modal-info">
+        <div class="modal-size" id="modalSize"></div>
+        <div class="modal-label" id="modalLabel"></div>
+        <div class="modal-specs" id="modalSpecs"></div>
+        <button class="modal-btn" onclick="goToEnquiry()">📩 Is Size Ka Quote Maangein</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwpZF63yU6JSaE5HksoN-8-yjBPM1ibwUqvEOKay2lJp8BR9tfvY9haqQcuTTzfRIou/exec";
+
+  // Live open/closed status (IST: Mon-Sat 10:00-19:00)
+  (function updateStatus() {
+    const now = new Date(new Date().toLocaleString('en-US', {timeZone:'Asia/Kolkata'}));
+    const day = now.getDay();   // 0=Sun, 6=Sat
+    const h = now.getHours(), m = now.getMinutes();
+    const mins = h * 60 + m;
+    const isWorkday = day >= 1 && day <= 6;
+    const isHours = mins >= 600 && mins < 1140; // 10:00–19:00
+    const isOpen = isWorkday && isHours;
+    const badge = document.getElementById('liveStatus');
+    const txt = document.getElementById('statusText');
+    if (!isOpen) {
+      badge.style.background = 'rgba(107,114,128,0.12)';
+      badge.style.borderColor = 'rgba(107,114,128,0.25)';
+      badge.querySelector('.status-dot-inner').style.background = '#6b7280';
+      badge.querySelector('.status-dot-inner').style.animation = 'none';
+      badge.querySelector('.status-dot-outer').style.background = 'rgba(107,114,128,0.25)';
+      txt.innerHTML = day === 0
+        ? '<strong style="color:#9ca3af">Closed Today (Sunday)</strong> — Opens Monday at 10:00 AM'
+        : '<strong style="color:#9ca3af">Closed Now</strong> — Opens Mon–Sat: 10:00 AM – 7:00 PM';
+    }
+  })();
+
+  // Product data with scale factor (0-1) controlling rendered bottle height
+  const products = [
+    { size:"15ml",  label:"Mini Vial",  scale:0.22, uses:["Attar & perfume oils","Essential oils","Sample packaging","Pharmaceutical vials"] },
+    { size:"30ml",  label:"Small",      scale:0.30, uses:["Cosmetic serums","Nail polish remover","Essential oils","Lab samples"] },
+    { size:"50ml",  label:"Compact",    scale:0.38, uses:["Hair oils","Herbal drops","Fragrance bottles","Cosmetics"] },
+    { size:"100ml", label:"Standard",   scale:0.47, uses:["Shampoo & conditioner","Herbal syrups","Pharma liquids","Cooking oils"] },
+    { size:"250ml", label:"Medium",     scale:0.56, uses:["Cooking oils","Chemical solvents","Beverages","Body lotions"] },
+    { size:"500ml", label:"Regular",    scale:0.66, uses:["Motor oil","Industrial lubricants","Food oils","Beverages"] },
+    { size:"1 Ltr", label:"Large",      scale:0.77, uses:["Industrial chemicals","Cooking oil","Agro products","Paints & varnish"] },
+    { size:"5 Ltr", label:"Bulk",       scale:0.85, uses:["Bulk oil storage","Chemical drums","Pharma bulk","Industrial use"], wide:true },
+    { size:"10 Ltr",label:"Industrial", scale:0.92, uses:["Heavy industrial use","Bulk chemicals","Lubricants","Agro chemicals"], wide:true },
+    { size:"25 Ltr",label:"Heavy Duty", scale:1.00, uses:["Drum packaging","Bulk storage","Export packaging","Industrial raw material"], wide:true },
+  ];
+
+  /**
+   * Draws a realistic aluminium bottle SVG that scales proportionally.
+   * scale: 0..1 — controls rendered height (smaller = shorter bottle)
+   * wide: true for large jerry-can style bottles
+   * modalSize: true for larger modal rendering
+   */
+  function bottleSVG(p, modalSize) {
+    const scale = p.scale;
+    const isWide = !!p.wide;
+    const uid = 'b' + Math.random().toString(36).slice(2,8);
+
+    /* ---- Canvas dimensions ---- */
+    const VW = modalSize ? 100 : 80;   // viewBox width
+    const VH = modalSize ? 200 : 130;  // viewBox height
+
+    /* ---- Bottle proportions ---- */
+    // Body width: small bottles slim, large bottles wide
+    const minBodyW = isWide ? 42 : 18;
+    const maxBodyW = isWide ? 62 : 46;
+    const bodyW = minBodyW + (maxBodyW - minBodyW) * scale;
+
+    // Body height fills most of VH, scaled
+    const minBodyH = 20;
+    const maxBodyH = VH * (isWide ? 0.60 : 0.68);
+    const bodyH = minBodyH + (maxBodyH - minBodyH) * scale;
+
+    // Shoulder: tapered top of body
+    const shoulderH = bodyW * (isWide ? 0.18 : 0.28);
+
+    // Neck width & height
+    const neckW = isWide ? bodyW * 0.25 : Math.max(8, bodyW * 0.35);
+    const neckH = isWide ? 6 : Math.max(6, bodyH * 0.12);
+
+    // Cap
+    const capW = neckW + 3;
+    const capH = isWide ? 8 : Math.max(5, neckH * 0.55);
+
+    // Total height of bottle
+    const totalH = capH + neckH + shoulderH + bodyH;
+    // Top Y so bottle sits at BOTTOM of viewBox
+    const topY = VH - totalH;
+
+    const cx = VW / 2;
+
+    // X positions
+    const capX = cx - capW / 2;
+    const neckX = cx - neckW / 2;
+    const bodyX = cx - bodyW / 2;
+
+    /* ---- Gradients ---- */
+    // Aluminium brushed metal gradient (left-to-right)
+    const metalGrad = `
+      <linearGradient id="${uid}m" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%"   stop-color="#5a6270"/>
+        <stop offset="10%"  stop-color="#9ba3af"/>
+        <stop offset="28%"  stop-color="#d4d8de"/>
+        <stop offset="42%"  stop-color="#f0f2f4"/>
+        <stop offset="50%"  stop-color="#ffffff"/>
+        <stop offset="60%"  stop-color="#e8eaec"/>
+        <stop offset="75%"  stop-color="#b0b7c0"/>
+        <stop offset="90%"  stop-color="#7c8592"/>
+        <stop offset="100%" stop-color="#4a5260"/>
+      </linearGradient>`;
+
+    // Cap: white plastic look
+    const capGrad = `
+      <linearGradient id="${uid}c" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%"   stop-color="#c8cacb"/>
+        <stop offset="30%"  stop-color="#f0f1f2"/>
+        <stop offset="50%"  stop-color="#ffffff"/>
+        <stop offset="75%"  stop-color="#dddfe0"/>
+        <stop offset="100%" stop-color="#b0b2b3"/>
+      </linearGradient>`;
+
+    // Shoulder: slightly darker gradient
+    const shoulderGrad = `
+      <linearGradient id="${uid}s" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%"   stop-color="#4a5260"/>
+        <stop offset="20%"  stop-color="#8e96a2"/>
+        <stop offset="45%"  stop-color="#d8dce2"/>
+        <stop offset="55%"  stop-color="#f4f5f6"/>
+        <stop offset="78%"  stop-color="#9ba3af"/>
+        <stop offset="100%" stop-color="#3e4656"/>
+      </linearGradient>`;
+
+    /* ---- Shoulder path: trapezoid from neckX..neckX+neckW at top to bodyX..bodyX+bodyW at bottom ---- */
+    const sY = topY + capH + neckH;
+    const shoulderPath = `M ${neckX} ${sY} L ${neckX + neckW} ${sY} L ${bodyX + bodyW} ${sY + shoulderH} L ${bodyX} ${sY + shoulderH} Z`;
+
+    /* ---- Wide bottle handle (25L style) ---- */
+    const handleSVG = isWide && p.scale > 0.95
+      ? `<path d="M ${cx-10} ${topY+2} Q ${cx-10} ${topY-10} ${cx} ${topY-10} Q ${cx+10} ${topY-10} ${cx+10} ${topY+2}"
+           fill="none" stroke="url(#${uid}m)" stroke-width="5" stroke-linecap="round"/>`
+      : '';
+
+    /* ---- Cap grip rings (horizontal lines on cap) ---- */
+    const ringCount = Math.max(2, Math.round(capH / 3));
+    let rings = '';
+    for (let i = 1; i < ringCount; i++) {
+      const ry = topY + (i / ringCount) * capH;
+      rings += `<line x1="${capX+1}" y1="${ry}" x2="${capX+capW-1}" y2="${ry}" stroke="rgba(0,0,0,0.1)" stroke-width="0.6"/>`;
+    }
+
+    /* ---- Highlight stripe on body ---- */
+    const hlX = bodyX + bodyW * 0.16;
+    const hlW = Math.max(3, bodyW * 0.10);
+    const hlY1 = sY + shoulderH + bodyH * 0.06;
+    const hlY2 = sY + shoulderH + bodyH * 0.88;
+
+    /* ---- Bottom rounded edge ---- */
+    const bottomY = sY + shoulderH + bodyH;
+    const bottomRY = Math.min(5, bodyW * 0.06);
+
+    /* ---- Label rectangle ---- */
+    const labelY = sY + shoulderH + bodyH * 0.22;
+    const labelH = bodyH * 0.38;
+    const labelX = bodyX + bodyW * 0.06;
+    const labelW = bodyW * 0.88;
+
+    return `<svg viewBox="0 0 ${VW} ${VH}" xmlns="http://www.w3.org/2000/svg" width="${VW}" height="${VH}">
+      <defs>
+        ${metalGrad}
+        ${capGrad}
+        ${shoulderGrad}
+      </defs>
+
+      ${handleSVG}
+
+      <!-- Cap -->
+      <rect x="${capX}" y="${topY}" width="${capW}" height="${capH}" rx="${Math.min(3, capH/2)}"
+            fill="url(#${uid}c)"/>
+      ${rings}
+      <!-- Cap top shine -->
+      <rect x="${capX+2}" y="${topY+1}" width="${capW-4}" height="${Math.max(1.5, capH*0.25)}" rx="1"
+            fill="rgba(255,255,255,0.55)"/>
+
+      <!-- Neck -->
+      <rect x="${neckX}" y="${topY+capH}" width="${neckW}" height="${neckH}" rx="1.5"
+            fill="url(#${uid}m)"/>
+
+      <!-- Shoulder -->
+      <path d="${shoulderPath}" fill="url(#${uid}s)"/>
+
+      <!-- Body -->
+      <rect x="${bodyX}" y="${sY+shoulderH}" width="${bodyW}" height="${bodyH}"
+            rx="${Math.min(6, bodyW*0.08)}" fill="url(#${uid}m)"/>
+
+      <!-- Bottom ellipse shadow -->
+      <ellipse cx="${cx}" cy="${bottomY}" rx="${bodyW/2}" ry="${bottomRY}"
+               fill="rgba(0,0,0,0.18)"/>
+
+      <!-- Body highlight stripe -->
+      <rect x="${hlX}" y="${hlY1}" width="${hlW}" height="${hlY2-hlY1}" rx="${hlW/2}"
+            fill="rgba(255,255,255,0.30)" opacity="0.85"/>
+
+      <!-- Label panel -->
+      <rect x="${labelX}" y="${labelY}" width="${labelW}" height="${labelH}" rx="3"
+            fill="rgba(255,255,255,0.10)" stroke="rgba(200,200,200,0.35)" stroke-width="0.6"/>
+
+    </svg>`;
+  }
+
+  // Render product cards
+  const grid = document.getElementById('productsGrid');
+  products.forEach((p) => {
+    const svg = bottleSVG(p, false);
+    const card = document.createElement('div');
+    card.className = 'product-card';
+    card.innerHTML = `
+      <div class="bottle-wrap">${svg}</div>
+      <div class="p-size">${p.size}</div>
+      <div class="p-label">${p.label}</div>
+      <div class="click-hint">👆 Click for details</div>
+    `;
+    card.addEventListener('click', () => openModal(p));
+    grid.appendChild(card);
+  });
+
+  // Modal
+  function openModal(p) {
+    document.getElementById('modalSize').textContent = p.size;
+    document.getElementById('modalLabel').textContent = p.label + ' Aluminium Bottle';
+    document.getElementById('modalBottle').innerHTML = bottleSVG(p, true);
+    const specs = document.getElementById('modalSpecs');
+    specs.innerHTML = '';
+    p.uses.forEach(u => {
+      specs.innerHTML += `<div class="spec-row"><div class="spec-dot"></div><div class="spec-text">${u}</div></div>`;
+    });
+    document.getElementById('modalOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    document.getElementById('modalOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function closeModalOutside(e) {
+    if (e.target === document.getElementById('modalOverlay')) closeModal();
+  }
+
+  function goToEnquiry() {
+    closeModal();
+    setTimeout(() => document.getElementById('enquiry').scrollIntoView({behavior:'smooth'}), 100);
+  }
+
+  // Form
+  let selectedStar = 0;
+  function setStar(val) {
+    selectedStar = val;
+    document.querySelectorAll('.star-btn').forEach((b, i) => b.classList.toggle('active', i < val));
+  }
+
+  function toggleMenu() {
+    alert('Menu: Products | About | Enquiry | Contact');
+  }
+
+  async function submitForm() {
+    const name    = document.getElementById('f-name').value.trim();
+    const mobile  = document.getElementById('f-mobile').value.trim();
+    const address = document.getElementById('f-address').value.trim();
+    if (!name || !mobile || !address) { alert('Kripya naam, mobile number aur address zaroor bharen.'); return; }
+    const btn = document.getElementById('submitBtn');
+    const successMsg = document.getElementById('successMsg');
+    const errorMsg   = document.getElementById('errorMsg');
+    successMsg.style.display = 'none';
+    errorMsg.style.display   = 'none';
+    btn.textContent = '⏳ Bhej raha hai...';
+    btn.disabled = true;
+    try {
+      await fetch(SCRIPT_URL, {
+        method:'POST', mode:'no-cors',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({name,mobile,address,rating:selectedStar||0})
+      });
+      successMsg.style.display = 'block';
+      successMsg.scrollIntoView({behavior:'smooth',block:'center'});
+      document.getElementById('f-name').value = '';
+      document.getElementById('f-mobile').value = '';
+      document.getElementById('f-address').value = '';
+      setStar(0);
+    } catch(err) {
+      errorMsg.style.display = 'block';
+    } finally {
+      btn.textContent = 'Submit Enquiry →';
+      btn.disabled = false;
+    }
+  }
+
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; }
+    });
+  }, {threshold:0.08});
+
+  document.querySelectorAll('.product-card,.why-card,.info-item').forEach(el => {
+    el.style.opacity='0'; el.style.transform='translateY(20px)';
+    el.style.transition='opacity 0.5s ease,transform 0.5s ease';
+    observer.observe(el);
+  });
+
+  // ESC key close modal
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+</body>
+</html>
